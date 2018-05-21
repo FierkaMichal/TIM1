@@ -1,0 +1,31 @@
+<h2 SADASDa></h2>
+
+<div>
+  <label>Ilość liczb do losowania :
+    <input [(ngModel)]="numbersCount">
+  </label>
+  <button mat-raised-button (click)="onClickRandom()">Losuj </button>
+
+
+
+
+  <h2>Wylosowane liczby:</h2>
+  <ul>
+    <li *ngFor="let hero of generatedNumbers">
+      {{hero}}
+    </li>
+  </ul>
+
+  <!--<ul>-->
+    <!--<li ng-repeat=”name in names”>{{name}}</li>-->
+  <!--</ul>-->
+
+
+  <div>
+    <button *ngIf="generatedNumbers" mat-raised-button (click)="onClickAverage()">Oblicz </button>
+    <label>
+      Średnia:
+      <div type="text">{{average}} </div>
+    </label>
+  </div>
+</div>
